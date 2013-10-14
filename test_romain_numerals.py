@@ -1,5 +1,7 @@
 #This is unit test module for get_romain_num
 #See http://content.codersdojo.org/code-kata-catalogue/roman-numerals/
+#For lanch test:
+#$python test_romain_numeral.py
 
 import unittest
 from romain_numerals import get_romain_numerals
