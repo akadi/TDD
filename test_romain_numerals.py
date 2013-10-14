@@ -1,4 +1,4 @@
-#This is unit test module for get_romain_numi
+#This is unit test module for get_romain_num
 #See http://content.codersdojo.org/code-kata-catalogue/roman-numerals/
 
 import unittest
