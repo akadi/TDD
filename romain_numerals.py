@@ -3,20 +3,20 @@
 #Convert arabic numbers into roman numbers.
 
 #Constst
-DICT_NUMS = {1: u'I',
-        2: u'II',
-        3: u'III',
-        4: u'IV',
-        5: u'V',
-        6: u'VI',
-        7: u'VII',
-        8: u'VIII',
-        9: u'IX',
-        10: u'X',
-        50: u'L',
-        500: u'D',
-        1000: u'M'
-            }
+DICT_NUMS = { 1: u'I',
+              2: u'II',
+              3: u'III',
+              4: u'IV',
+              5: u'V',
+              6: u'VI',
+              7: u'VII',
+              8: u'VIII',
+              9: u'IX',
+             10: u'X',
+             50: u'L',
+            500: u'D',
+           1000: u'M'
+         }
 
 def get_romain_numerals(number):
     u"""
