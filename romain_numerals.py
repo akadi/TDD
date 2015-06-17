@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# Author(s): Abdelhalim Kadi <kadi.halim@gmail.com>
-#Convert arabic numbers into roman numbers.
+# Author: Abdelhalim Kadi <kadi.halim@gmail.com>
+# Convert arabic numbers into roman numbers.
 
-#Constst
+# Constst
 DICT_NUMS = { 1: u'I',
               2: u'II',
               3: u'III',
@@ -25,22 +25,24 @@ def get_romain_numerals(number):
         return - a romain representation for this number.
         Example: get_romain_numerals(1) --> u'I'.
     """
-    repr_romain  = u''
+    repr_romain  = u""
     keys = sorted(DICT_NUMS.iterkeys())
     if number in keys:
-        return  u'%s%s' % (repr_romain, DICT_NUMS.get(number, ''))
+        return  u"{0}{1}".format(repr_romain, DICT_NUMS.get(number, ''))
     else:
-        #Look for the element in keys who is the closest to our number
-        #We return Concatinating value  of element \
-        #and  value of (number - key) if number-element in DICT_NUMS.keys()
-        #else we recall get_romain_numerals with (number - key) argument.
-        #(recursive function )
+        # Look for the element in keys who is the closest to our number
+        # We return Concatinating value  of element \
+        # and  value of (number - key) if number-element in DICT_NUMS.keys()
+        # else we recall get_romain_numerals with (number - key) argument.
+        # (recursive function )
         i = 0
         j = 1
         while number not in xrange(keys[i], keys[j]):
-            i = i + 1
-            j = j + 1
-
-        repr_romain = repr_romain + DICT_NUMS[keys[i]] + get_romain_numerals(number - keys[i])
+            i += 1
+            j += 1
+        repr_romain = "{0}{1}{2}".format(
+                                     repr_romain,
+                                     DICT_NUMS[keys[i]],
+                                     get_romain_numerals(number - keys[i]))
 
         return repr_romain
